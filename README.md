@@ -1,16 +1,107 @@
-# React + Vite
+# 📇 Contact Manager — React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Mini application React de gestion de contacts avec consommation d’API externe et gestion d’état locale.
 
-Currently, two official plugins are available:
+Ce projet a été réalisé dans un cadre pédagogique afin de consolider les bases essentielles de React (hooks, composants, formulaires, appels API, gestion d’état, etc.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objectifs pédagogiques
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+L’application permet de démontrer la maîtrise des notions suivantes :
 
-## Expanding the ESLint configuration
+- Utilisation des hooks React : `useState`, `useEffect`
+- Appels API avec `fetch`
+- Gestion des états : loading, error, données
+- Formulaires contrôlés
+- Rendu conditionnel
+- Architecture propre par composants
+- Manipulation d’une liste dynamique (ajout / suppression)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Fonctionnalités
+
+- 🔄 Chargement des contacts depuis une API externe  
+- 📃 Affichage dynamique de la liste des contacts  
+- ➕ Ajout d’un contact via formulaire (gestion locale)  
+- ❌ Suppression d’un contact  
+- ⏳ Affichage d’un message pendant le chargement  
+- ⚠️ Gestion des erreurs  
+- 📭 Message affiché lorsqu’aucun contact n’est disponible  
+- 🔢 Affichage du nombre total de contacts  
+
+---
+
+## 🧱 Architecture du projet
+
+src/
+├── components/
+│ ├── ContactForm.jsx
+│ ├── ContactList.jsx
+│ └── ContactItem.jsx
+│
+├── services/
+│ └── contactApi.js
+│
+└── App.jsx
+
+Cette structure respecte les bonnes pratiques de séparation des responsabilités :
+- Les composants gèrent l’interface
+- Le dossier `services` gère les appels API
+- `App.jsx` centralise la logique globale
+
+---
+
+## 🌐 API utilisée
+
+API publique fournie par JSONPlaceholder :  
+https://jsonplaceholder.typicode.com/users
+
+Champs exploités :
+- id  
+- name  
+- email  
+- phone  
+
+---
+
+## 🚀 Installation et exécution du projet
+
+### 1. Cloner le dépôt
+```bash
+git clone https://github.com/jully237/react-gestion-contacts.git
+
+
+2. Accéder au dossier du projet
+cd react-gestion-contacts
+
+3. Installer les dépendances
+npm install
+
+4. Lancer le projet
+npm run dev
+
+
+Puis ouvrir dans le navigateur :
+http://localhost:5173
+
+🛠️ Technologies utilisées
+
+React (Vite)
+
+JavaScript ES6+
+
+HTML5 / CSS3
+
+Git & GitHub
+
+API REST (fetch)
+
+👩‍💻 Auteure
+
+Jully Matchum Fonkam
+Étudiante en Bachelor Computer Science
+Passionnée par le développement et la gestion des données
+
+GitHub : https://github.com/jully237
